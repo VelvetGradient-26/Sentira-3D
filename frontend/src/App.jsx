@@ -258,6 +258,10 @@ export default function App() {
       animConfig.current.targetColor.setHex(0x10b981); // Tailwind Emerald 500
       animConfig.current.targetScale = 1.8;
       animConfig.current.speed = 0.005; // Gentle spin for result
+    } else if (data.sentiment === "Neutral") {
+      animConfig.current.targetColor.setHex(0xeab308); // Tailwind Yellow 500
+      animConfig.current.targetScale = 2.2; // Expand further for neutral
+      animConfig.current.speed = 0.004;
     } else {
       animConfig.current.targetColor.setHex(0xef4444); // Tailwind Red 500
       animConfig.current.targetScale = 1.8;
@@ -382,14 +386,26 @@ export default function App() {
                     Analysis Result
                   </h3>
                   <Activity
-                    className={`w-5 h-5 ${result.sentiment === "Positive" ? "text-emerald-400" : "text-red-400"}`}
+                    className={`w-5 h-5 ${
+                      result.sentiment === "Positive"
+                        ? "text-emerald-400"
+                        : result.sentiment === "Neutral"
+                          ? "text-yellow-400"
+                          : "text-red-400"
+                    }`}
                   />
                 </div>
 
                 <div className="flex items-end justify-between">
                   <div>
                     <div
-                      className={`text-4xl font-bold ${result.sentiment === "Positive" ? "text-emerald-400" : "text-red-400"}`}
+                      className={`text-4xl font-bold ${
+                        result.sentiment === "Positive"
+                          ? "text-emerald-400"
+                          : result.sentiment === "Neutral"
+                            ? "text-yellow-400"
+                            : "text-red-400"
+                      }`}
                     >
                       {result.sentiment}
                     </div>
