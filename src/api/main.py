@@ -92,11 +92,12 @@ async def load_model():
 
 @app.post("/predict", response_model=SentimentResponse)
 async def predict_sentiment(request: SentimentRequest):
-    """Takes a string and returns the sentiment (Positive/Negative) with confidence."""
+    """Takes a string and returns the sentiment (Positive/Negative/Neutral) with confidence."""
     if not request.text.strip():
         raise HTTPException(status_code=400, detail="Text cannot be empty.")
 
     start_time = time.time()
+    NEUTRAL_THRESHOLD = 0.62  # If confidence is below this, classify as neutral
 
     try:
         # 1. Tokenize input
@@ -122,8 +123,12 @@ async def predict_sentiment(request: SentimentRequest):
             confidence_val = confidence.item()
             class_idx = predicted_class.item()
 
-        # 3. Format Output
-        sentiment_label = "Positive" if class_idx == 1 else "Negative"
+        # 3. Format Output - Classify as Neutral if confidence is too low
+        if confidence_val < NEUTRAL_THRESHOLD:
+            sentiment_label = "Neutral"
+        else:
+            sentiment_label = "Positive" if class_idx == 1 else "Negative"
+        
         inference_time = (time.time() - start_time) * 1000 # Convert to milliseconds
 
         return {
