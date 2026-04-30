@@ -11,7 +11,7 @@ ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://127
 
 # Model Configuration
 BASE_DIR = Path(__file__).resolve().parent.parent
-MODEL_DIR = BASE_DIR / "src" / "model" / "saved_model"
+MODEL_DIR = BASE_DIR / "src" / "model" / "model_train_1"
 
 # Logging
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
