@@ -16,7 +16,7 @@ try:
 except ImportError:
     # Fallback if config doesn't exist
     ALLOWED_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:3000", "http://localhost:8080"]
-    MODEL_DIR = Path(__file__).resolve().parent.parent / "model" / "saved_model"
+    MODEL_DIR = Path(__file__).resolve().parent.parent / "model" / "model_train_1"
     DEBUG = False
 
 # --- API Models ---
