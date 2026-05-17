@@ -1,0 +1,11 @@
+1. make the app offline
+2. Test benchmarks on diff hardware
+3. add more models
+4. train models on more datasets
+5. custom transformer implementation (no finetuning other lm(s))
+6. add feat for custom models
+7. add feat to train custom models or predefined models on other datasets (or corpora)
+8. add feat RAG
+9. add feat to use quantized models or raw models
+10. export onxx, pytorch weights or llama.cpp
+11. migrate architecture to other framework (probably django)
