@@ -9,19 +9,19 @@ A cutting-edge sentiment analysis system combining **quantized DistilBERT** for 
 
 ---
 
-## 🎯 Features
+## Features
 
-- **🚀 High-Performance Inference**: Quantized DistilBERT with FP32→INT8 dynamic quantization for 2-3x speedup
-- **🎨 Interactive 3D Visualization**: Real-time particle animations using Three.js responding to sentiment
-- **💻 Multi-Device Support**: CUDA (NVIDIA GPU), MPS (Apple Silicon), and CPU fallback
-- **📊 Sentiment Classification**: Three-class output (Positive, Negative, Neutral) with confidence scores
-- **⚡ Low Latency**: <50ms inference on M1/M2/M3, <10ms on NVIDIA GPUs
-- **🔌 REST API**: FastAPI backend with auto-generated Swagger documentation
-- **🎭 Beautiful UI**: Modern glassmorphism design with real-time feedback
+- ** High-Performance Inference**: Quantized DistilBERT with FP32→INT8 dynamic quantization for 2-3x speedup
+- ** Interactive 3D Visualization**: Real-time particle animations using Three.js responding to sentiment
+- ** Multi-Device Support**: CUDA (NVIDIA GPU), MPS (Apple Silicon), and CPU fallback
+- ** Sentiment Classification**: Three-class output (Positive, Negative, Neutral) with confidence scores
+- ** Low Latency**: <50ms inference on M1/M2/M3, <10ms on NVIDIA GPUs
+- ** REST API**: FastAPI backend with auto-generated Swagger documentation
+- ** Beautiful UI**: Modern glassmorphism design with real-time feedback
 
 ---
 
-## 📈 Model Performance
+## Model Performance
 
 Trained on **Sentiment140 dataset** (1.6M tweets) with comprehensive evaluation on 320K test samples:
 
@@ -55,7 +55,7 @@ See [evaluation results](src/model/evaluation_results/) for detailed plots and m
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -85,7 +85,7 @@ See [evaluation results](src/model/evaluation_results/) for detailed plots and m
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -124,7 +124,7 @@ npm install
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Option 1: Full Stack (Recommended)
 
@@ -155,7 +155,7 @@ Visit `http://127.0.0.1:8000/docs` for interactive API documentation.
 
 ---
 
-## 💡 Usage
+## Usage
 
 ### Frontend Application
 
@@ -204,7 +204,7 @@ curl "http://127.0.0.1:8000/health"
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Sentira-3D/
@@ -250,7 +250,7 @@ Sentira-3D/
 
 ---
 
-## 🧠 Model Training
+## Model Training
 
 ### Training on CUDA (NVIDIA GPU)
 
@@ -290,7 +290,7 @@ Default configuration:
 
 ---
 
-## 📊 Evaluation
+## Evaluation
 
 Run comprehensive evaluation on 320K test samples:
 
@@ -356,7 +356,7 @@ device = torch.device("cpu")
 
 ---
 
-## 📈 Performance Benchmarks
+## Performance Benchmarks
 
 | Device          | Model Size | Inference Time | Throughput    | Memory |
 | --------------- | ---------- | -------------- | ------------- | ------ |
@@ -368,7 +368,7 @@ device = torch.device("cpu")
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 ### Backend Configuration
 
@@ -451,7 +451,7 @@ BATCH_SIZE = 16  # From 64
 
 ---
 
-## 🎓 Training & Fine-tuning
+## Training & Fine-tuning
 
 ### Resume Training from Checkpoint
 
@@ -482,7 +482,7 @@ model = DistilBertForSequenceClassification.from_pretrained(
 
 ---
 
-## 📝 Citation
+## Citation
 
 If you use Sentira-3D in your research, please cite:
 
