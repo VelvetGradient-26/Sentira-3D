@@ -11,13 +11,13 @@ A cutting-edge sentiment analysis system combining **quantized DistilBERT** for 
 
 ## Features
 
-- ** High-Performance Inference**: Quantized DistilBERT with FP32→INT8 dynamic quantization for 2-3x speedup
-- ** Interactive 3D Visualization**: Real-time particle animations using Three.js responding to sentiment
-- ** Multi-Device Support**: CUDA (NVIDIA GPU), MPS (Apple Silicon), and CPU fallback
-- ** Sentiment Classification**: Three-class output (Positive, Negative, Neutral) with confidence scores
-- ** Low Latency**: <50ms inference on M1/M2/M3, <10ms on NVIDIA GPUs
-- ** REST API**: FastAPI backend with auto-generated Swagger documentation
-- ** Beautiful UI**: Modern glassmorphism design with real-time feedback
+- **High-Performance Inference**: Quantized DistilBERT with FP32→INT8 dynamic quantization for 2-3x speedup
+- **Interactive 3D Visualization**: Real-time particle animations using Three.js responding to sentiment
+- **Multi-Device Support**: CUDA (NVIDIA GPU), MPS (Apple Silicon), and CPU fallback
+- **Sentiment Classification**: Three-class output (Positive, Negative, Neutral) with confidence scores
+- **Low Latency**: <50ms inference on M1/M2/M3, <10ms on NVIDIA GPUs
+- **REST API**: FastAPI backend with auto-generated Swagger documentation
+- **Beautiful UI**: Modern glassmorphism design with real-time feedback
 
 ---
 
